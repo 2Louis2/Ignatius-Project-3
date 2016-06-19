@@ -20,11 +20,11 @@ public class Program5 {
   int five = (((money / 100) % 20) % 10) / 5;
   int one = ((((money / 100) % 20) % 10) % 5) / 1;
   
-  double quarters = (((((money / 100) % 20) % 10) % 5) % 1) / 0.25;
-  double dimes = ((((((money / 100) % 20) % 10) % 5) % 1) % 0.25) / 0.1;
-  double nickels = (((((((money / 100) % 20) % 10) % 5) % 1) % 0.25) % 0.1) / 0.05;
-  double pennies = ((((((((money /100) % 20) % 10) % 5) % 1) % 0.25) % 0.1) % 0.05) / 0.01;
-   
+  int quarters = (money % 100) / 25;
+  int dimes = ((money % 100) % 25) / 10;
+  int nickels = (((money % 100) % 25) % 10) / 5;
+  int pennies = ((((money % 100) % 25) % 10) % 5) / 1;
+  
   System.out.println("For money, you have: "); 
   System.out.printf("%4.2f%n", ((float)money)/100);
   
